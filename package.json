@@ -1,0 +1,15 @@
+{
+  "name": "emigrando-hoy",
+  "version": "1.0.0",
+  "description": "Un proyecto SPA de una gestoría de servicios migratorios y ciudadanías europeas. Proyecto para materia Desarrollo Web de Licenciatura en Sistemas UADE.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.75.0"
+  }
+}

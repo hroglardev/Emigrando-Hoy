@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+:root {
+  --accent-color: #3339cb;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+button {
+  font-size: 1.2rem;
+}
+
 /* navbar */
 
 header {
@@ -14,6 +30,7 @@ header {
   width: 100%;
   padding-right: 50px;
   z-index: 1;
+  color: #fff;
 }
 
 .page-title {
@@ -31,6 +48,10 @@ header nav ul {
 nav ul li a {
   text-decoration: none;
   color: #fff;
+  font-size: 1.2rem;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* Hero section */
@@ -41,7 +62,6 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 10px solid red;
 }
 
 #hero::before {
@@ -54,7 +74,7 @@ nav ul li a {
   background-image: url('../assets/images/Hero.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(50%);
+  filter: brightness(30%);
   z-index: 0;
 }
 
@@ -72,11 +92,75 @@ nav ul li a {
   gap: 3rem;
 }
 
-h2 {
-  font-size: 3rem;
+.contact-button {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.3rem 1.4rem;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    background-color: var(--accent-color);
+    color: white;
+  }
+}
+
+.contact-button > img {
+  width: 60px;
+}
+
+.contact-button:hover > img {
+  filter: invert(100%);
+  transition: all 300ms ease-in-out;
 }
 
 p {
   font-size: 1.5rem;
   width: 50%;
+}
+
+/* Services Section */
+
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.service-card {
+  border: 3px solid var(--accent-color);
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: 1fr 0.3fr 0.8fr;
+  gap: 15px;
+  width: 310px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.service-card div {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.service-card img {
+  width: 80%;
+}
+
+.service-card h3,
+.service-card p {
+  text-align: center;
+  align-self: center;
+  width: 100%;
+  height: 100%;
 }

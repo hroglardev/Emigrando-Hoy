@@ -149,6 +149,11 @@ header {
 
 .nav-list {
   list-style: none;
+  @media (max-width:800px) {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
    li a{
     color: #fff;
     text-decoration: none;

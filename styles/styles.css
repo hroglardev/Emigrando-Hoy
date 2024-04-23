@@ -141,6 +141,13 @@ header {
 .nav-list {
   list-style: none;
 }
+@media (max-width: 800px) {
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
 .nav-list li a {
   color: #fff;
   text-decoration: none;

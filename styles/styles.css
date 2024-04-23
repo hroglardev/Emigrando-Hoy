@@ -159,6 +159,7 @@ header {
   align-items: center;
   position: relative;
   padding-inline: 8px;
+  gap: 20px;
 }
 
 #hero::before {
@@ -181,6 +182,12 @@ header {
   z-index: 0;
   width: 100%;
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  #hero h2 {
+    margin-top: 105px;
+  }
 }
 
 #hero div p {
@@ -225,6 +232,22 @@ header {
   transition: all 300ms ease-in-out;
 }
 
+.arrow.down {
+  z-index: 10;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
 p {
   font-size: 1.5rem;
   width: 50%;
@@ -238,8 +261,13 @@ p {
   padding-block: 80px;
 }
 
+#services h2 {
+  text-align: center;
+}
+
 .cards-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem;
 }
@@ -284,6 +312,7 @@ p {
   border: 2px solid #3339cb;
   padding: 1rem 2rem;
   font-size: 1.4rem;
+  margin-bottom: 15px;
 }
 
 /* Por que nosotros */
@@ -309,6 +338,10 @@ p {
   z-index: -1;
 }
 
+#whyus h2 {
+  text-align: center;
+}
+
 #whyus h2,
 #whyus h3,
 #whyus p {
@@ -322,12 +355,24 @@ p {
   gap: 25px;
   justify-items: center;
 }
+@media (max-width: 800px) {
+  .whycards-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+}
 
 .whycards-container > div {
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 10px;
   width: 75%;
+}
+@media (max-width: 800px) {
+  .whycards-container > div {
+    width: 100%;
+  }
 }
 
 .whycards-container img {
@@ -364,6 +409,13 @@ p {
   row-gap: 50px;
   padding-inline: 100px;
 }
+@media (max-width: 800px) {
+  #contact {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+}
 
 #contact img {
   filter: invert(100%);
@@ -378,6 +430,12 @@ p {
 iframe {
   width: 90%;
   height: 90%;
+}
+@media (max-width: 600px) {
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 #contact h2 {
@@ -413,11 +471,22 @@ iframe {
   width: 100%;
 }
 
+@media (max-width: 600px) {
+  .footer-nav-container {
+    display: none;
+  }
+}
+
 #contact nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+#contact li a {
+  color: #FFF;
+  text-decoration: none;
 }
 
 #contact li:hover {
@@ -428,4 +497,18 @@ iframe {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+#contact p {
+  width: 100%;
+}
+
+.copyright {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  span {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

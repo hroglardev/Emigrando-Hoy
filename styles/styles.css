@@ -182,8 +182,18 @@ header {
   z-index: 0;
   width: 100%;
   text-align: center;
+  animation: appear 1s ease-in-out forwards;
+  opacity: 0;
 }
 
+@keyframes fade-down {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 @media (max-width: 800px) {
   #hero h2 {
     margin-top: 105px;
@@ -216,7 +226,9 @@ header {
   gap: 10px;
   cursor: pointer;
   border: none;
-  transition: all 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+  animation: appear 1s ease-in-out forwards;
+  opacity: 0;
 }
 .contact-button:hover {
   background-color: #3339cb;
@@ -246,6 +258,16 @@ header {
   }
   60% {
     transform: translateY(-5px);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 p {

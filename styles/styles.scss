@@ -257,6 +257,7 @@ header {
 }
 
 
+
 .contact-button > img {
   width: 60px;
 }
@@ -272,6 +273,14 @@ header {
   z-index: 10;
   animation: bounce 1s infinite;
 }
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
 
 
 @keyframes bounce {
@@ -563,3 +572,7 @@ span {
     display: none;
   }
 }
+
+
+
+
